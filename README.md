@@ -27,3 +27,23 @@ docker build -t arshas/palindrome .
 docker volume create palindrome-db
 docker run -p 8080:8080 arshas/palindrome -v palindrome-db:/tmp
 ```
+
+
+## Verification
+- [Swagger](http://localhost:8080/swagger-ui/#/palindrome-checker-controller)
+
+Sample Request 
+
+```shell
+{
+  "input": "ara"
+}
+```
+
+
+Sample Response 
+```shell
+{
+  "palindrome": true
+}
+```

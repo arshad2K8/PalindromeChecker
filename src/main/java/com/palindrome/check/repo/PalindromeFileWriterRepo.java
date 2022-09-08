@@ -60,7 +60,7 @@ public class PalindromeFileWriterRepo implements PalindromeRepo {
     }
 
     private void persistDataToFile(Path path, String data) {
-        try(BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.APPEND)) {
+        try(BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.APPEND, StandardOpenOption.CREATE)) {
             bufferedWriter.write(data);
             bufferedWriter.newLine();
         } catch (IOException e) {

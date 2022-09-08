@@ -14,9 +14,15 @@ There are several ways to run a Spring Boot application on your local machine. O
 - Run following commands using a shell
 
 ```shell
+
 cd PalindromChecker
 ./mvnw install
-./mvnw  spring-boot:run -Dfile.store.dir="/tmp"
+
+- On Mac (Please ensure file.store.dir exists )
+./mvnw  spring-boot:run -Dspring-boot.run.arguments="--file.store.dir=/tmp"
+
+- On Windows (Please ensure file.store.dir exists )
+./mvnw  spring-boot:run -Dspring-boot.run.arguments="--file.store.dir=C:\tmp1"
 ```
 
 ## Running the application using docker

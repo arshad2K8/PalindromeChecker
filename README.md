@@ -8,16 +8,22 @@ For building and running the application you need:
 
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.palindrome.check.PalindromeCheckerApplication` class from your IDE.
 
-Alternatively you can download the source code from the following Github Link
-
+- You can download the source code from the following Github Link
+- [Palindrome Checker Github](https://github.com/arshad2K8/PalindromeChecker)
+- pass in file.store.dir to any of your local storage path or else it defaults to /tmp
+- Run following commands using a shell
 
 ```shell
-mvn spring-boot:run
+cd PalindromChecker
+./mvnw install
+./mvnw  spring-boot:run -Dfile.store.dir="/tmp"
 ```
 
-./mvnw install
-docker build --build-arg JAR_FILE=target/*.jar -t arshas/palindrome .
+## Running the application using docker
 
+```shell
+docker build --build-arg JAR_FILE=target/*.jar -t arshas/palindrome .
 docker build -t arshas/palindrome .
 docker volume create palindrome-db
 docker run -p 8080:8080 arshas/palindrome -v palindrome-db:/tmp
+```

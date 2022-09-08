@@ -1,0 +1,8 @@
+app:
+  info:
+    name: PalindromeChecker
+    description: PalindromeChecker
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
